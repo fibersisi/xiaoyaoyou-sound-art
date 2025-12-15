@@ -18,7 +18,7 @@ export const useAudio = () => {
       const audio = new Audio();
       audio.crossOrigin = "anonymous";
       audio.loop = true;
-      audio.src = 'https://assets.mixkit.co/music/preview/mixkit-dreaming-big-31.mp3'; // Default track
+      audio.src = 'https://fibersisi.github.io/xiaoyaoyou-sound-art/assets/sound/xiaoyaoyou.mp3'; // Default track
       audioElementRef.current = audio;
 
       const source = audioContextRef.current.createMediaElementSource(audio);

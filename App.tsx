@@ -36,7 +36,7 @@ const App: React.FC = () => {
                  <h2 className="text-4xl font-serif text-amber-100 mb-4">Free and Easy Wandering</h2>
                  <p className="text-gray-300 mb-8 max-w-md mx-auto leading-relaxed">
                    "In the Northern Ocean there is a fish, the name of which is Kun. 
-                   <br/>The size of Kun is I know not how many thousand li. 
+                   <br/>The size of Kun is I know not how many thousand li.  
                    <br/>It changes into a bird with the name of Peng."
                  </p>
                  <button 
