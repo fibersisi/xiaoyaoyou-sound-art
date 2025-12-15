@@ -32,6 +32,32 @@ const Controls: React.FC<ControlsProps> = ({ isPlaying, onTogglePlay, onFileUplo
            <Volume2 size={12} />
            <span>Audio drives wave height & particle glow</span>
         </div>
+
+        <div className="flex gap-4 w-full justify-center">
+          <button
+            onClick={onTogglePlay}
+            className="flex items-center justify-center w-14 h-14 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all ring-1 ring-white/30 hover:ring-cyan-400"
+          >
+            {isPlaying ? <Pause size={24} fill="currentColor" /> : <Play size={24} fill="currentColor" className="ml-1" />}
+          </button>
+
+          <button
+            onClick={() => fileInputRef.current?.click()}
+            className="flex items-center gap-2 px-6 h-14 rounded-full bg-white/5 hover:bg-white/10 text-white transition-all ring-1 ring-white/20 hover:ring-amber-200"
+          >
+            <Upload size={18} />
+            <span className="text-sm font-medium">Upload Audio</span>
+          </button>
+          
+          <input
+            type="file"
+            ref={fileInputRef}
+            onChange={handleFileChange}
+            accept="audio/*"
+            className="hidden"
+          />
+        </div>
+        
       </div>
     </div>
   );
