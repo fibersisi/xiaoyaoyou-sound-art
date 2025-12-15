@@ -1,0 +1,5 @@
+{
+  "name": "Xiaoyaoyou: Kunpeng Sound Art",
+  "description": "A 3D sound art visualization inspired by Zhuangzi's 'Xiaoyaoyou'. Features a reactive particle system representing the mythical Kunpeng creature and a dynamic ocean, driven by Web Audio API and Three.js.",
+  "requestFramePermissions": []
+}
