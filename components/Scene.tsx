@@ -26,7 +26,24 @@ const Scene: React.FC<SceneProps> = ({ analyser }) => {
         
         <Suspense fallback={null}>
           <EnvironmentParticles analyser={analyser} />
-          <Kunpeng analyser={analyser} />
+          
+          {/* Main Kunpeng Bird */}
+          <Kunpeng analyser={analyser} position={[0, 5, 0]} />
+          
+          {/* Reflection Kunpeng */}
+          {/* 
+             Water Level: -5
+             Main Y: 5 (Distance 10)
+             Reflection Y: -5 - 10 = -15
+             Scale Y: -1 to flip vertical motion
+          */}
+          <Kunpeng 
+            analyser={analyser} 
+            position={[0, -15, 0]} 
+            scale={[1, -1, 1]} 
+            isReflection={true} 
+          />
+          
           <Ocean analyser={analyser} />
           <fog attach="fog" args={['#050510', 10, 60]} />
         </Suspense>

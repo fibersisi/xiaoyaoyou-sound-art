@@ -100,7 +100,8 @@ const fragmentShader = `
     // Using UV y-coord (which roughly maps to depth on the plane)
     float fogFactor = smoothstep(0.0, 0.2, vUv.y) * smoothstep(1.0, 0.8, vUv.y);
     
-    gl_FragColor = vec4(color, 0.85 * fogFactor);
+    // Reduced alpha from 0.85 to 0.7 to allow reflection to shine through
+    gl_FragColor = vec4(color, 0.7 * fogFactor);
   }
 `;
 
